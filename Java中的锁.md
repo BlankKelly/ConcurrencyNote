@@ -54,7 +54,7 @@
 
 注意，<code>while(isLocked)</code>循环也被称作“自旋锁”（spin lock）。当<code>isLocked</code>为<code>true</code>时，调用<code>lock()</code>的线程在<code>wait()</code>调用后阻塞等待。为防止该线程没有收到notify()调用也从wait()中返回（也称作虚假唤醒），这个线程会重新去检查isLocked条件以决定当前是否可以安全地继续执行还是需要重新保持等待，而不是认为线程被唤醒了就可以安全地继续执行了。如果<code>isLocked</code>为false，当前线程会退出<code>while(isLocked)</code>循环，并将<code>isLocked</code>设回true，让其它正在调用<code>lock()</code>方法的线程能够在Lock实例上加锁。
 
-当线程执行完临界区的代码，调用<code>unlock()</code>方法。执行<code>unlock()</cde>将<code>isLocked</code>设置回false，然后唤醒在<code>lock()</coce>方法中<code>wait()</code>调用上阻塞等待的一个线程。
+当线程执行完临界区的代码，调用<code>unlock()</code>方法。执行<code>unlock()</code>将<code>isLocked</code>设置回false，然后唤醒在<code>lock()</code>方法中<code>wait()</code>调用上阻塞等待的一个线程。
 
 ####锁重入
 
