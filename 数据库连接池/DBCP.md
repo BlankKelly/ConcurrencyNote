@@ -178,16 +178,21 @@ JNDI是Java平台的一部分，提供给基于Java技术的应用一个统一�
 	  conn.close();
 
 ####类图
-**PoolingDataSource **
+**PoolingDataSource**
+
 ![PoolingDataSource](https://commons.apache.org/proper/commons-dbcp/images/uml/PoolingDataSource.gif)
 
+
 **PoolingDataConnection**
+
 ![PoolingDataSource](https://commons.apache.org/proper/commons-dbcp/images/uml/PoolingConnection.gif)
 
 **Delegating**
+
 ![Delegating](https://commons.apache.org/proper/commons-dbcp/images/uml/Delegating.gif)
 
 **AbandonedObjectPool**
+
 ![AbandonedObjectPool](https://commons.apache.org/proper/commons-dbcp/images/uml/AbandonedObjectPool.gif)
 
 ####序列图
