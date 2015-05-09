@@ -70,8 +70,8 @@ DBCP 2基于Commons Pool 2，与DBCP 1.x 相比提供了更好的性能，支持
 | maxOpenPreparedStatements | unlimited | 在同一时刻，此语句池可以分配的打开语句的最大个数，负值将没有限制。 |
 
 这个组件也可以池化（pool）PreparedStatement。当允许为每一个连接创建一个语句池时，PreparedStatement会被连接池通过下列方法之一来创建：
-- <code>public PreparedStatemet prepareStatement(String sql)</code>
-- <code>public PreparedSattement prepareSattement(String sql, int resultSetType, int resultSetConcurrency)
+- public PreparedStatemet prepareStatement(String sql)
+- public PreparedSattement prepareSattement(String sql, int resultSetType, int resultSetConcurrency)
 
 **注意：**-确保你的连接为其它连接保留了一些资源。Pooling PreparedSattements 可能会让它们的游标在数据中一直打开，导致一个连接用尽游标，特别，如果<code>maxPreparedStatements</code>保留默认值（没有限制）且一个程序在每一个连接上打开了大量的PreparedSattements。为了避免这个问题，<code>maxOpenPreparedStatements</code>应该被设为一个小于在一个连接上可以打开的最大游标数的值。
 
