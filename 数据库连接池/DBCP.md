@@ -105,9 +105,12 @@ DBCP 2基于Commons Pool 2，与DBCP 1.x 相比提供了更好的性能，支持
 
 ####开发者指南
 **BasicDataSource**
+
 ![BasicDataSource](https://commons.apache.org/proper/commons-dbcp/images/uml/BasicDataSource.gif)
 
+
 **ConnectionFactory**
+
 ![ConnectionFactory](https://commons.apache.org/proper/commons-dbcp/images/uml/ConnectionFactory.gif)
 
 #####JNDI Howto
